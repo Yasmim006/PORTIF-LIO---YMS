@@ -1,0 +1,6 @@
+// JavaScript (opcional para animação dos botões)
+document.querySelector('.submit-btn').addEventListener('click', function() {
+  this.classList.add('button-clicked');
+  setTimeout(() => this.classList.remove('button-clicked'), 200);
+});
+

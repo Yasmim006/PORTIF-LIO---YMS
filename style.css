@@ -1,0 +1,921 @@
+/* ESTILO GERAL */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+
+
+body {
+   background-color: #fff;
+   height: 100vh;
+}
+
+
+
+
+
+
+
+
+.interface {
+   max-width: 1280px;
+   margin: 0 auto;
+}
+
+
+
+
+.flex {
+   display: flex;
+}
+
+
+
+
+.btn-contato button {
+   padding: 10px 40px;
+   font-size: 18px;
+   font-weight: 600;
+   background-color: #9162C2;
+   border: 0;
+   border-radius: 30px;
+   cursor: pointer;
+   transition: .3s;
+}
+
+
+
+
+h2.titulo {
+   color: #000;
+   font-size: 38px;
+   text-align: center;
+}
+
+
+
+
+h2.titulo span {
+   color: #9162C2;
+}
+
+
+
+
+button:hover,
+form .btn-enviar input:hover {
+   box-shadow: 0px 0px 8px #9162C2;
+   transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+/* ESTILO DO CABEÇALHO */
+header {
+   padding: 20px 4%;
+   font-size: 18px;
+   font-weight: 600;
+   background-color: #9162C2;
+   border: 0;
+   border-radius: 30px;
+   cursor: pointer;
+   transition: .3s;
+}
+
+
+header {
+   background-color: #d1a5f7; /* cor roxa */
+   height: 200px; /* Ajuste a altura para o valor desejado */
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 20px; /* Espaçamento interno para manter o conteúdo alinhado */
+}
+
+
+header img {
+   height: 200px; /* Ajuste o tamanho do logo */
+}
+
+
+header nav {
+   display: flex;
+   gap: 15px; /* Espaçamento entre os itens do menu */
+}
+
+
+header nav a {
+   color: #603f84; /* Cor dos links */
+   text-decoration: none;
+   font-size: 20px; /* Tamanho da fonte */
+   font-weight: bold;
+}
+
+
+
+
+header>.interface {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+
+
+
+header a {
+   color: #71489d;
+   text-decoration: none;
+   display: inline-block;
+   transition: .2s;
+}
+
+
+
+
+
+
+
+
+header nav.menu-desktop a:hover {
+   color: #71489d;
+   transform: scale(1.05);
+}
+
+
+
+
+header nav ul {
+   list-style-type: none;
+}
+
+
+
+
+header nav.menu-desktop ul li {
+   display: inline-block;
+   padding: 0 40px;
+}
+
+
+
+
+/* ESTILO DO MENU MOBILE */
+
+
+
+
+.btn-abrir-menu{
+   display: none;
+}
+
+
+
+
+.btn-abrir-menu i{
+   color: #9162C2;
+   font-size: 40px;
+}
+
+
+
+
+.menu-mobile{
+   background-color: #000;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   right: 0;
+   z-index: 99999;
+   width: 0%;
+   overflow: hidden;
+   transition: .5s;
+}
+
+
+
+
+.menu-mobile.abrir-menu{
+   width: 70%;
+}
+
+
+
+
+
+
+
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+   display: block;
+}
+
+
+
+
+.menu-mobile .btn-fechar{
+   padding: 20px 5%;
+}
+
+
+
+
+.menu-mobile .btn-fechar i{
+   color: #9162C2;
+   font-size: 30px;
+}
+
+
+
+
+.menu-mobile nav ul{
+   text-align: right;
+}
+
+
+
+
+
+
+
+
+.menu-mobile nav ul li a{
+   color: #000;
+   font-size: 20px;
+   font-weight: 300;
+   padding: 20px 8%;
+   display: block;
+}
+
+
+
+
+.menu-mobile nav ul li a:hover{
+   background-color: #9162C2;
+   color: #000;
+}
+
+
+
+
+.overlay-menu{
+   background-color: #000000df;
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 88888;
+   display: none;
+}
+
+
+
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site {
+   padding: 40px 4%;
+}
+
+
+
+
+section.topo-do-site .flex {
+   align-items: center;
+   justify-content: center;
+   gap: 90px;
+}
+
+
+
+
+.topo-do-site h1 {
+   color: #000;
+   font-size: 42px;
+   line-height: 40px;
+}
+
+
+
+
+.topo-do-site .txt-topo-site h1 span {
+   color: #9162C2;
+}
+
+
+
+
+.topo-do-site .txt-topo-site p {
+   color: #000;
+   margin: 40px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.topo-do-site .img-topo-site img {
+   position: relative;
+   animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+
+
+
+@keyframes flutuar {
+   0% {
+       top: 0;
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   100% {
+       top: 30px;
+   }
+}
+
+
+
+
+/* ESTILO DAS ESPECIALIDADES */
+section.especiliadades {
+   padding: 40px 4%;
+   font-size: 18px;
+   font-weight: 600;
+   background-color: #000;
+   border: 0;
+   border-radius: 30px;
+   cursor: pointer;
+   transition: .3s;
+}
+
+
+section.especiliadades .flex {
+   gap: 60px;
+}
+
+
+
+
+
+
+
+
+.especiliadades .especialidades-box {
+   color: #000;
+   padding: 40px;
+   border-radius: 20px;
+   margin-top: 45px;
+   transition: .2s;
+}
+
+
+
+
+.especiliadades .especialidades-box:hover {
+   transform: scale(1.05);
+   box-shadow: 0 0 20px #000;
+}
+
+
+
+
+.especiliadades .especialidades-box i {
+   font-size: 70px;
+   color: #9162C2;
+}
+
+
+
+
+.especiliadades .especialidades-box h3 {
+   font-size: 28px;
+   margin: 15px 0;
+}
+
+
+
+
+
+
+
+
+/* ESTILO DO SOBRE MIM */
+section.sobre {
+   padding: 80px 4%;
+}
+
+
+
+
+section.sobre .flex {
+   align-items: center;
+   gap: 60px;
+}
+
+
+
+
+.sobre .txt-sobre {
+   color: #000;
+}
+
+
+
+
+.sobre .txt-sobre h2 {
+   font-size: 40px;
+   line-height: 40px;
+   margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+.sobre .txt-sobre h2 span {
+   color: #9162C2;
+   display: block;
+}
+
+
+
+
+.sobre .txt-sobre p {
+   margin: 20px 0;
+   text-align: justify;
+}
+
+
+
+
+.btn-social button {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   border: none;
+   background-color: #9162C2;
+   font-size: 22px;
+   cursor: pointer;
+   margin: 0 5px;
+   transition: .2s;
+}
+
+
+
+
+/* ESTILO DO PORTFÓLIO */
+section.portfolio {
+   padding: 80px 4%;
+   box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+
+
+
+section.portfolio .flex {
+   justify-content: space-around;
+   margin-top: 60px;
+}
+
+
+
+
+.img-port {
+   width: 360px;
+   height: 460px;
+   background-size: cover;
+   background-position: 100% 0%;
+   transition: 8s;
+   cursor: pointer;
+   border-radius: 40px;
+   position: relative;
+}
+
+
+
+
+.img-port:hover {
+   background-position: 100% 100%;
+}
+
+
+
+
+
+
+
+
+.overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #000000b8;
+   border-radius: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 24px;
+   font-weight: 600;
+   color: #000;
+   opacity: 0;
+   transition: .5s;
+}
+
+
+
+
+.overlay:hover {
+   opacity: 1;
+}
+
+
+
+
+/* ESTILO DO FORMULÁRIO FALE COMIGO*/
+#contact {
+   padding: 50px;
+   background-color: #f4f4f4;
+   text-align: center;
+ }
+ 
+ #contact h2 {
+   color: #5a0d8e;
+   margin-bottom: 20px;
+ }
+ 
+ .form-group {
+   margin-bottom: 15px;
+   text-align: left;
+   max-width: 400px;
+   margin-left: auto;
+   margin-right: auto;
+ }
+ 
+ label {
+   display: block;
+   font-weight: bold;
+   color: #5a0d8e;
+ }
+ 
+ input[type="text"],
+ input[type="email"],
+ textarea {
+   width: 100%;
+   padding: 10px;
+   margin-top: 5px;
+   border: 1px solid #5a0d8e;
+   border-radius: 5px;
+   box-sizing: border-box;
+   background-color: #fff;
+   color: #5a0d8e;
+ }
+ 
+ input[type="text"],
+ input[type="email"] {
+   height: 40px;
+ }
+ 
+ textarea {
+   height: 100px;
+   resize: none;
+ }
+ 
+ .submit-btn {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #5a0d8e;
+   color: #fff;
+   padding: 12px 25px;
+   border: none;
+   border-radius: 25px;
+   cursor: pointer;
+   font-size: 16px;
+   font-weight: bold;
+   transition: all 0.3s ease;
+   position: relative;
+   overflow: hidden;
+   margin-top: 20px;
+ }
+ 
+ .submit-btn:hover {
+   background-color: #7630b0;
+ }
+ 
+ .btn-text {
+   margin-right: 10px;
+ }
+ 
+ .btn-icon {
+   transform: translateX(-5px);
+   transition: transform 0.3s ease;
+ }
+ 
+ .submit-btn:hover .btn-icon {
+   transform: translateX(5px);
+ }
+ 
+ .submit-btn::before {
+   content: "";
+   position: absolute;
+   width: 200%;
+   height: 200%;
+   top: 50%;
+   left: 50%;
+   background: rgba(255, 255, 255, 0.1);
+   border-radius: 50%;
+   transform: translate(-50%, -50%) scale(0);
+   transition: transform 0.5s ease;
+ }
+ 
+ .submit-btn:active::before {
+   transform: translate(-50%, -50%) scale(1);
+ }
+ 
+ /* Responsividade */
+ @media (max-width: 768px) {
+   #contact {
+     padding: 20px;
+   }
+ 
+   .form-group {
+     margin-bottom: 10px;
+   }
+ 
+   input[type="text"],
+   input[type="email"],
+   textarea {
+     padding: 8px;
+   }
+ 
+   .submit-btn {
+     width: 100%;
+     padding: 12px;
+   }
+ }
+ 
+
+
+/* ESTILO DO RODAPÉ */
+
+
+
+
+footer {
+   padding: 40px 4%;
+   box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+
+
+
+footer .flex {
+   justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+footer .line-footer {
+   padding: 20px 0;
+}
+
+
+
+
+
+
+
+
+.borda {
+   border-top: 2px solid #9162C2;
+}
+
+
+
+
+footer .line-footer p i {
+   color: #9162C2;
+   font-size: 22px;
+}
+
+
+
+
+footer .line-footer p a {
+   color: #000;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1020px) {
+
+
+
+
+
+
+
+
+   /* CLASSES GERAIS */
+   .flex {
+       flex-direction: column;
+   }
+
+
+
+
+   .topo-do-site .flex{
+       flex-direction: column-reverse;
+   }
+
+
+
+
+   h2.titulo {
+       font-size: 34px;
+       line-height: 30px;
+   }
+
+
+
+
+   /* CABEÇALHO */
+   .menu-desktop,
+   .btn-contato {
+       display: none;
+   }
+
+
+
+
+   /* TOPO DO SITE */
+
+
+
+
+   section.topo-do-site .flex {
+       gap: 40px;
+   }
+
+
+
+
+   section.topo-do-site {
+       padding: 20px 8%;
+   }
+
+
+
+
+   .topo-do-site h1 {
+       font-size: 30px;
+   }
+
+
+
+
+   .topo-do-site .img-topo-site img {
+       width: 100%;
+   }
+
+
+
+
+   /* ESPECIALIDADES */
+   section.especiliadades {
+       padding: 40px 8%;
+
+
+
+
+
+
+
+
+   }
+
+
+
+
+   /* SOBRE */
+   section.sobre {
+       padding: 80px 8%;
+   }
+
+
+
+
+   .sobre .txt-sobre h2 {
+       font-size: 34px;
+       line-height: 35px;
+       text-align: center;
+   }
+
+
+   .btn-social{
+       text-align: center;
+   }
+
+
+
+
+   .img-sobre img{
+       width: 100%;
+   }
+
+
+
+
+   /* PORTFÓLIO */
+   section.portfolio {
+       padding: 80px 8%;
+   }
+
+
+
+
+   .img-port {
+       width: 100%;
+       max-width: 360px;
+       margin: 0 auto;
+   }
+
+
+   section.portfolio .flex {
+      gap: 60px;
+   }
+
+
+
+
+   /* RODAPÉ */
+   footer .flex {
+       flex-direction: column;
+       gap: 30px;
+   }
+
+
+
+
+   footer .line-footer {
+       text-align: center;
+   }
+}
+
+
+
+
+
